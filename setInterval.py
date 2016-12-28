@@ -1,6 +1,7 @@
 import threading
 
-def setInterval(func,time):
+def setInterval(func,time, a, b, c):
     e = threading.Event()
     while not e.wait(time):
-        func()
+        print('before the func call')
+        func(a, b, c)
